@@ -10,7 +10,9 @@
 
 
 # データの取り方
-php参照
+118.27.0.132
+user=jupiter
+pass=jupiter
 
 # テンプレ
 alter table {table} MODIFY COLUMN {column} {type};--タイプ変更
