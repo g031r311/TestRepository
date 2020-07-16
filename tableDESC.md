@@ -10,18 +10,11 @@
 
 
 # データの取り方
-118.27.0.132
-user=jupiter
-pass=jupiter
+* 118.27.0.132
+* user=jupiter
+* pass=jupiter
 
-# テンプレ
-alter table {table} MODIFY COLUMN {column} {type};--タイプ変更
-alter table {table} change column {oldName} {newName} {type};--名前変更
-alter table {table} add {column} {type};--追加
-alter table {table} modify {moveColumn} text after {goalColumn};--移動
-FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDATE CASCADE--外部キー設定
-\c;--キャンセル
-//show create table {table};
+testDB.phpを実行して確認してください。（実行環境が無い人は[paiza.io](https://paiza.io/ja)とか使ってください。）
 
 # テーブル一覧
 * [interesting](#interesting)
