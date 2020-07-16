@@ -12,6 +12,14 @@
 # データの取り方
 php参照
 
+# テンプレ
+alter table {table} MODIFY COLUMN {column} {type};--タイプ変更
+alter table {table} change column {oldName} {newName} {type};--名前変更
+alter table {table} add {column} {type};--追加
+alter table {table} modify {moveColumn} text after {goalColumn};--移動
+FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDATE CASCADE--外部キー設定
+\c;--キャンセル
+
 # テーブル一覧
 * [interesting](#interesting)
 * [user](#user)
@@ -23,86 +31,92 @@ php参照
 * [category](#category)
 
 ## interesting
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|interesting_id     |int            |NOT NULL               |
+|interesting_id     |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|user_id            |int            |FOREIGN KEY(user)      |
+|user_id            |int(11)        |FOREIGN KEY(user)      |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|category_id        |int            |FOREIGN KEY (category) |
+|category_id        |int(11)        |FOREIGN KEY (category) |
 |                   |               |ON DELETE SET NULL     |
 |                   |               |ON UPDATE CASCADE      |
 |interesting_date   |datetime       |                       |
 
 ## user
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|user_id            |int            |NOT NULL               |
+|user_id            |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|user_idName        |varchar        |                       |
-|user_pass          |varchar        |                       |
-|user_firstName     |varchar        |                       |
-|user_secondName    |varchar        |                       |
-|user_mailAddress   |varchar        |                       |
+|user_idName        |varchar(255)   |                       |
+|user_pass          |varchar(255)   |                       |
+|user_firstName     |varchar(255)   |                       |
+|user_secondName    |varchar(255)   |                       |
+|user_mailAddress   |varchar(255)   |                       |
 
 ## video
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|video_id           |int            |NOT NULL               |
+|video_id           |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|video_name         |varchar        |                       |
+|video_name         |varchar(255)   |                       |
 |video_date         |date           |                       |
-|video_picture      |varchar        |                       |
-|video_introduceUrl |varchar        |                       |
+|video_picture      |varchar(255)   |                       |
+|video_introduceUrl |varchar(255)   |                       |
 
 ## stock
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|stock_id           |int            |NOT NULL               |
+|stock_id           |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|video_id           |int            |FOREIGN KEY(video)     |
+|video_id           |int(11)        |FOREIGN KEY(video)     |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|shop_id            |int            |FOREIGN KEY(shop)      |
+|shop_id            |int(11)        |FOREIGN KEY(shop)      |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|stock_videoNum     |int            |                       |
+|stock_videoNum     |int(11)        |                       |
 
 ## shop
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|shop_id            |int            |NOT NULL               |
+|shop_id            |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|shop_name          |varchar        |                       |
+|shop_name          |varchar(255)   |                       |
 
-## order
-* ENGIN = InnoDB
+## book
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|order_id           |int            |NOT NULL               |
+|book_id            |int            |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
 |user_id            |int            |FOREIGN KEY(user)      |
@@ -114,11 +128,12 @@ php参照
 |shop_id            |int            |FOREIGN KEY(shop)      |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|order_date         |datetime       |                       |
-|order_complete     |bool           |                       |
+|book_date          |datetime       |                       |
+|book_complete      |tinyint(1)     |                       |
 
 ## videoCategory
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
@@ -134,7 +149,8 @@ php参照
 |                   |               |ON UPDATE CASCADE      |
 
 ## category
-* ENGIN = InnoDB
+作成済み
+* ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
 
 |名前               |データ型       |他|
