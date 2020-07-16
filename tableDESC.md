@@ -116,16 +116,16 @@ FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDAT
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|book_id            |int            |NOT NULL               |
+|book_id            |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|user_id            |int            |FOREIGN KEY(user)      |
+|user_id            |int(11)        |FOREIGN KEY(user)      |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|video_id           |int            |FOREIGN KEY(video)     |
+|video_id           |int(11)        |FOREIGN KEY(video)     |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|shop_id            |int            |FOREIGN KEY(shop)      |
+|shop_id            |int(11)        |FOREIGN KEY(shop)      |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
 |book_date          |datetime       |                       |
@@ -138,13 +138,13 @@ FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDAT
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|videoCategory_id   |int            |NOT NULL               |
+|videoCategory_id   |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|video_id           |int            |FOREIGN KEY(video)     |
+|video_id           |int(11)        |FOREIGN KEY(video)     |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
-|category_id        |int            |FOREIGN KEY(category)  |
+|category_id        |int(11)        |FOREIGN KEY(category)  |
 |                   |               |ON DELETE SET NULL     | 
 |                   |               |ON UPDATE CASCADE      |
 
@@ -155,8 +155,8 @@ FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDAT
 
 |名前               |データ型       |他|
 |:--                |:--            |:--                    |
-|category_id        |int            |NOT NULL               |
+|category_id        |int(11)        |NOT NULL               |
 |                   |               |AUTO_INCREMENT         |
 |                   |               |PRIMARY KEY            |
-|category_name      |varchar        |                       |
+|category_name      |varchar(255)   |                       |
 
