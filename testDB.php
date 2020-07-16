@@ -33,7 +33,7 @@ $stmt = $pdo->prepare('INSERT INTO video (video_name,video_date,video_picture,vi
                         VALUES(:name,:date,:picture,:introduceUrl)');
 $stmt->bindValue(':name', "河童のクゥと夏休み", PDO::PARAM_STR);
 $date = new DateTime('2007-01-01');
-$stmt->bindValue(':date', $date->format('YYYY-mm-dd'), PDO::PARAM_STR);
+$stmt->bindValue(':date', $date->format('Y-m-d'), PDO::PARAM_STR);
 $stmt->bindValue(':picture', "img/kappa", PDO::PARAM_STR);
 $stmt->bindValue(':introduceUrl', "https://www.youtube.com/watch?v=2500F6PTvzE", PDO::PARAM_STR);
 $stmt->execute();
