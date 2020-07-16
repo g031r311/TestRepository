@@ -21,6 +21,7 @@ alter table {table} add {column} {type};--追加
 alter table {table} modify {moveColumn} text after {goalColumn};--移動
 FOREIGN KEY (`column`) REFERENCES `table` (`column`) ON DELETE SET NULL ON UPDATE CASCADE--外部キー設定
 \c;--キャンセル
+//show create table {table};
 
 # テーブル一覧
 * [interesting](#interesting)
