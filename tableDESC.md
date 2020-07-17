@@ -26,7 +26,7 @@ testDB.phpを実行して確認してください。（実行環境が無い人�
 * [videoCategory](#videoCategory)
 * [category](#category)
 
-## interesting　[↑](テーブル一覧)
+## interesting　[↑](#テーブル一覧)
 作成済み
 * ENGINE = InnoDB
 * DEFAULT CHARSET = utf8
