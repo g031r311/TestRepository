@@ -22,7 +22,7 @@ testDB.phpを実行して確認してください。（実行環境が無い人�
 * [video](#video)
 * [stock](#stock)
 * [shop](#shop)
-* [order](#order)
+* [book](#book)
 * [videoCategory](#videoCategory)
 * [category](#category)
 
