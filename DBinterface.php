@@ -1,4 +1,10 @@
 <?php
+/**
+ * データベースの入出力処理
+ * 
+ * @author Hidemaru-Jupiter
+ * @version 1.0
+ */
 class JupiterDB{//スーパークラス（継承で使うだけ）
     protected $pdo;
     protected $stmt;
