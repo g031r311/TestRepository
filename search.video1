@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <header>
+        <p>レンタルビデオ株式会社Jupiter 
+            <small>あなたにピッタリなコンテンツを、</small>
+        </p>
+    </header>
+    <p>キーワードを入力<br>
+        <input type="search" name="s1" size="30" maxlength="20">
+    <p>あなたの気になるジャンルを選んでください(複数選択可)<br>
+        <input type="radio" name="c1" value="アクション"> アクション
+        <input type="radio" name="c2" value="ミステリー"> ミステリー
+        <input type="radio" name="c3" value="サスペンス"> サスペンス<br>
+        <input type="radio" name="c4" value="ホラー"> ホラー
+        <input type="radio" name="c5" value="アドベンチャー"> アドベンチャー
+        <input type="radio" name="c6" value="SF"> SF<br>
+        <input type="radio" name="c7" value="コメディ"> コメディ
+        <input type="radio" name="c8"
+               value="ラブロマンス"> ラブロマンス
+        <input type="radio" name="c9" value="青春"> 青春<br>
+    </p>
+    <div>©Copyright 2020 Jupiter Inc. All Rights Reserved。</div>
+    </body>
+</html>
