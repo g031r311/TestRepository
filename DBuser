@@ -1,0 +1,65 @@
+INSERT INTO user (
+  user_id,
+  user_idName,
+  user_pass,
+  user_firstName,
+  user_secondName,
+  user_mailAddress
+)
+VALUES
+(  '1',
+   'n4wz7zx',
+   'tKIjcntV',
+   '古橋',
+   '華美',
+   'faoyeihdynxhanabi18457@lvgxyqoe.oclt.duj'
+),
+(  '2',
+   '42uijg9',
+   'I8AxpRV8',
+   '永山',
+   '睦美',
+   'Mutsumi_Nagayama@sjvxqa.lns'
+),
+(  '3',
+   'mrdieba',
+   'EPgEN2bk',
+   '目黒',
+   '直治',
+   'naoji_meguro@obunltubur.nc'
+),
+(  '4',
+   'ipn2bru',
+   'nANg86w',
+   '小嶋',
+   '浩次',
+   'koujiojima@ddfvjdljm.obcl.gck'
+),
+(  '5',
+   'amtpukt',
+   'K5usHWf4',
+   '脇田',
+   '富士夫',
+   'fujio734@xxyupvutei.fj'
+),
+(  '6',
+   'bgme36m',
+   'M49BFADi',
+   '今田',
+   '公一',
+   'kouichiimada@njtlp.vxs'
+),
+(  '7',
+   'xdkrfx4',
+   'V0jdgKR',
+   '藤本',
+   '江民',
+   'Emi_Fujimoto@gaqqxo.rm.vl'
+),
+(  '8',
+   'p7xjag5',
+   'rWzFynN0',
+   '岡村',
+   '久子',
+   'hisako7286@vipnksagsz.sffpu.ni'
+);
