@@ -18,6 +18,22 @@
 --
 -- Table structure for table `book`
 --
+INSERT INTO book (
+  book_id,
+  user_id,
+  video_id,
+  shop_id,
+  book_date,
+  book_complete
+)
+VALUES
+(  '',
+   '',
+   '',
+   '',
+   '',
+   '1'
+);
 
 DROP TABLE IF EXISTS `book`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
